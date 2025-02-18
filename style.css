@@ -1,6 +1,6 @@
 *{
 }
-header{
+.header-bottom{
     width: 100 vw;
     display:flex;
     flex-direction: row;
@@ -19,6 +19,7 @@ nav ul{
 }
 footer{
     display: flex;
+    flex-direction:column;
     align-items: center;
     justify-content: center;
 }
