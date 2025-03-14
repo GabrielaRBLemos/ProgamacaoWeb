@@ -1,5 +1,7 @@
 :root{
     --text-color:#000000;
+    --border-width: 2px;
+    --corner-roundness: 8px;
 }
 .header-bottom{
     width: 100 vw;
@@ -9,7 +11,7 @@
     justify-content: space-evenly;
 }
 header{
-    border-bottom: solid 2px;
+    border-bottom: solid var(--border-width);
 }
 nav{
     flex-grow:1;
@@ -23,7 +25,7 @@ nav ul{
 }
 nav li{
     border-style: solid;
-    border-width: 0 0 2px 0;
+    border-width: 0 0 var(--border-width) 0;
 }
 nav a{
     display: flex;
@@ -38,6 +40,10 @@ main{
     flex-direction:column;
     align-items: center;
     justify-content: center;
+}
+main img{
+    width: 60vw;
+    border-radius: var(--corner-roundness);
 }
 main p{
     width: 60vw;
@@ -54,4 +60,6 @@ footer{
     flex-direction:column;
     align-items: center;
     justify-content: center;
+    border-top: solid var(--border-width);
+    margin-top: 4vh;
 }
