@@ -3,56 +3,84 @@
     --text-color:#293651;
     --accent-color:#B1503E;
     --border-width: 2px;
+    --border-style: solid;
     --corner-roundness: 8px;
 }
+#Minha-Foto{
+    width: 15vw;
+}
+/* Font Related CSS*/
 @font-face {
     font-family: "Coaster-Simoney";
-    src: url("/Assets/coaster-simone-font-1742073987-0/Coaster-Simone-BF6759db02ed0f0.otf");
+    src: url("/Assets/Fonts/coaster-simone-font-1742073987-0/Coaster-Simone-BF6759db02ed0f0.otf");
 }
+@font-face {
+    font-family: "Betania-Patmos";
+    src: url("/Assets/Fonts/betania_patmos/fonts/BetaniaPatmos-Regular.otf");
+}
+h1,h2,h3,h4{
+    font-family: "Coaster-Simoney";
+}
+h1 {
+    font-size: 2.3em;
+}
+h2 {
+    font-size: 1.8em;
+}
+h3 {
+    font-size: 1.47em;
+}
+h4 {
+    font-size: 1.3em;
+}
+body{
+    font-size: 1.3em;
+}
+/*END of Font Related CSS*/
 *{
     color: var(--text-color);
     background-color: var(--background-color);
     text-align: center;
+    font-family:"Betania-Patmos";
+}
+audio{
+    width: 100%;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    border-bottom: var(--border-style) var(--border-width);
 }
 a,strong,em{
     color: var(--accent-color);
 }
-h1,h2,h3,h4,h5{
-    font-family: "Coaster-Simoney";
+q{
+    font-style: italic;
+    background-color: var(--text-color);
+    color: var(--background-color);
 }
-.header-bottom{
-    width: 100 vw;
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-}
-header{
-    border-bottom: dotted var(--border-width);
+header h1{
+    flex-grow: 1;
 }
 nav{
-    flex-grow:1;
-}
-nav ul{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    list-style: none;
-}
-nav li{
-    /*border-style: dotted;
-    border-width: 0 0 var(--border-width) 0;*/
+    flex-grow: 5;
+    display: grid;
+    grid-auto-flow:column;
+    grid-template-rows:100%;
+    grid-auto-columns:auto auto auto auto auto;
 }
 nav a{
     display: flex;
     flex-direction: column;
     align-items:center;
-    justify-content: space-between;
+    justify-content: center;
     text-decoration: none;
     color:var(--text-color);
-    font-family: "Coaster-Simoney";
     font-weight: bold;
+    width: 100%;
+    border-left: var(--border-width) var(--border-style);
 }
 main{
     display: flex;
@@ -60,8 +88,8 @@ main{
     align-items: center;
     justify-content: center;
 }
-main img{
-    width: 60vw;
+main img, main video{
+    width: 30vw;
     border-radius: var(--corner-roundness);
 }
 main p{
@@ -79,6 +107,43 @@ footer{
     flex-direction:column;
     align-items: center;
     justify-content: center;
-    border-top: dotted var(--border-width);
+    border-top: var(--border-style) var(--border-width);
     margin-top: 4vh;
+}
+/*== Phone media queries==*/
+
+@media only screen and (orientation: portrait){
+    nav{
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: space-evenly;
+        gap: 4vw;
+    }
+    nav a{
+        border: none;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 1.17em;
+    }
+    h4 {
+        font-size: 1em;
+    }
+    body {
+        font-size: 1em;
+    }
 }
