@@ -12,6 +12,7 @@
 *{
     color: var(--text-color);
     background-color: var(--background-color);
+    text-align: center;
 }
 a,strong,em{
     color: var(--accent-color);
