@@ -58,8 +58,10 @@ a,strong,em{
 }
 q{
     font-style: italic;
-    background-color: var(--text-color);
-    color: var(--background-color);
+    display: inline-block;
+    border: var(--border-width) var(--border-style) var(--text-color);
+    border-left: none;
+    border-right: none;
 }
 header h1{
     flex-grow: 1;
