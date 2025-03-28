@@ -85,6 +85,15 @@ nav a{
     width: 100%;
     border-left: var(--border-width) var(--border-style);
 }
+nav a:hover{
+    text-decoration:  underline;
+}
+nav a img{
+    animation: wiggle 3s step-end infinite;
+}
+nav a img:hover{
+    animation: none;
+}
 main{
     display: flex;
     flex-direction:column;
@@ -196,4 +205,10 @@ table tr td:last-child,table tr th:last-child {
 @keyframes blink-caret {
     0%, 100% { border-color: transparent; }
     50% { border-color: var(--text-color); }
+}
+@keyframes wiggle {
+    0%{rotate: 0deg;}
+    25% { rotate: 15deg; }
+    50%{rotate: 0deg;}
+    75%{rotate: -15deg;}
 }
