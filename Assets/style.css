@@ -5,6 +5,7 @@
     --border-width: 2px;
     --border-style: solid;
     --corner-roundness: 8px;
+    --text-size:1em;
 }
 #Minha-Foto{
     width: 15vw;
@@ -34,7 +35,7 @@ h4 {
     font-size: 1.3em;
 }
 body{
-    font-size: 1.3em;
+    font-size: var(--text-size);
 }
 /*END of Font Related CSS*/
 *{
@@ -112,6 +113,49 @@ footer{
     border-top: var(--border-style) var(--border-width);
     margin-top: 4vh;
 }
+.h-with-subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+.h-with-subtitle p{
+    margin-top: calc(-1*var(--text-size));
+    opacity: 75%;
+}
+#logo{
+    height: var(--text-size);
+    border-right: var(--border-width) solid;
+    animation: blink-caret 1s step-end infinite;
+}
+table {
+    border-collapse: collapse;
+    margin: 4vw;
+}
+td, th {
+    border: var(--border-style) var(--border-width);
+    padding: var(--border-width);
+}
+table tr:first-child th {
+    border-top: 0;
+}
+table tr:last-child td {
+    border-bottom: 0;
+}
+table tr td:first-child, table tr th:first-child {
+    border-left: 0;
+}
+table tr td:last-child,table tr th:last-child {
+    border-right: 0;
+}
+
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+}
+
 /*== Phone media queries==*/
 
 @media only screen and (orientation: portrait){
@@ -148,4 +192,8 @@ footer{
     body {
         font-size: 1em;
     }
+}
+@keyframes blink-caret {
+    0%, 100% { border-color: transparent; }
+    50% { border-color: var(--text-color); }
 }
