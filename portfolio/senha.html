@@ -29,7 +29,29 @@
 				>
 			</nav>
 		</header>
-		<main></main>
+		<main>
+			<h2>Jogo da Senha</h2>
+			<p>
+				Uma <em>senha misteriosa</em> aguarda para ser desvendada. Use as
+				<em>dicas</em> e a sua sagacidade para
+				<em>revelar o segredo oculto</em>.<br />
+				<img src="/Assets/droplet.svg" />: são os dígitos
+				<em>corretos</em>
+				na
+				<em>posição certa</em>.<br />
+				<img src="/Assets/droplet-half-2.svg" />: são dígitos que estão
+				<em>corretos</em>, mas em <em>posições diferentes</em>.
+			</p>
+			<div class="game">
+				<label for="code">Tente adivinhar:</label>
+				<input type="text" id="code" name="code" maxlength="4" />
+				<button id="codeButton" type="button" onclick="checkCode()">
+					Testar
+				</button>
+				<h3 id="result">Tentativas:</h3>
+				<ol id="attemptList" reversed></ol>
+			</div>
+		</main>
 		<footer>
 			<p>
 				<a href="LICENSE"
@@ -55,6 +77,6 @@
 				<a href="https://www.behance.net/gatype">Gatype</a>
 			</p>
 		</footer>
-		<script src="assets/script.js"></script>
+		<script src="/Assets/script.js"></script>
 	</body>
 </html>
