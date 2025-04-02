@@ -143,8 +143,13 @@ table tr td:last-child,table tr th:last-child {
 form {
     display: flex;
     flex-direction:column;
-    align-items:self-start;
+    align-items:stretch;
     justify-content:center;
+    gap: 1vh;
+}
+label{
+    padding: 0;
+    margin: 0;
 }
 select,input{
     border: none;
@@ -157,6 +162,7 @@ button{
     background: var(--text-color);
     color: var(--background-color);
     border-radius: var(--corner-roundness);
+    padding: 4%;
 }
 /*END of Standard Class CSS*/
 /*Portfolio horizontal scrolling*/
