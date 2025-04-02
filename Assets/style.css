@@ -143,7 +143,7 @@ table tr td:last-child,table tr th:last-child {
 form {
     display: flex;
     flex-direction:column;
-    align-items:stretch;
+    align-items:flex-start;
     justify-content:center;
     gap: 1vh;
 }
@@ -156,6 +156,9 @@ select,input{
     background-color: var(--text-color);
     color: var(--background-color);
     opacity: 60%;
+}
+form button{
+    margin-top: 2vh;
 }
 button{
     border: none;
