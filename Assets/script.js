@@ -1,5 +1,5 @@
 const host = window.location.origin
-if (window.location.href == window.location.origin + "/index.html" || window.location.href == window.location.origin + "/portfolio/index.html") {
+if (window.location.href == window.location.origin || window.location.href == window.location.origin + "/index.html" || window.location.href == window.location.origin + "/portfolio/index.html") {
     // START efeito de digitação
     const typed = document.getElementById("typed");
     const text = typed.textContent;
