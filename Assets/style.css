@@ -175,7 +175,13 @@ button{
     width: 90vw;
     border-left:var(--border-style) var(--border-width);
     border-right:var(--border-style) var(--border-width);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+.portfolio::-webkit-scrollbar {
+    display: none;
+}
+
 .port-item{
     display: flex;
     flex-direction: column;
